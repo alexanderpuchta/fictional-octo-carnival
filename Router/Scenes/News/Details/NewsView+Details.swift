@@ -16,7 +16,11 @@ extension NewsView {
         
         var body: some View {
             self.content
-                .navigationTitle(self.title)
+                .toolbar {
+                    ToolbarItem(placement: .navigation) {
+                        Text(self.title)
+                    }
+                }
         }
     }
 }

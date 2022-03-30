@@ -411,8 +411,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				Base,
+				de,
 			);
 			mainGroup = F753314627EF2C2B007959F3;
 			productRefGroup = F753315027EF2C2B007959F3 /* Products */;
