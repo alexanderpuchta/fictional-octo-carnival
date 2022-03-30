@@ -6,7 +6,7 @@ import Combine
 import Foundation
 
 protocol NewsManagerRepresentable {
-    func fetch() async -> AnyPublisher<[NewsModel], APIServiceError>
+    func fetch() async -> AnyPublisher<[NewsModel], RequestError>
 }
 
 
@@ -29,9 +29,9 @@ final class NewsManager {
 
 extension NewsManager: NewsManagerRepresentable {
     
-    func fetch() async -> AnyPublisher<[NewsModel], APIServiceError> {
+    func fetch() async -> AnyPublisher<[NewsModel], RequestError> {
         await self.service
-            .getNews()
+            .fetch()
             .eraseToAnyPublisher()
     }
 }
