@@ -23,8 +23,8 @@ struct NewsView: View {
 private extension NewsView {
     
     var content: some View {
-        List(self.viewModel.news, id: \.self) { news in
-            Text(news)
+        List(self.viewModel.news) { news in
+            Text(news.title)
                 .fontWeight(.bold)
                 .onNavigation { self.viewModel.details(news) }
         }

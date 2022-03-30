@@ -37,7 +37,7 @@ private extension SettingsView.ItemView {
 }
 
 
-// MARK:  Helper
+// MARK: Helper
 
 private extension SettingsView.ItemView {
     

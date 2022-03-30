@@ -35,7 +35,7 @@ extension NewsRootView.Coordinator {
         self.detailViewModel = nil
     }
     
-    func open(news: String) {
-        self.detailViewModel = .init(id: news)
+    func open(news: NewsModel) {
+        self.detailViewModel = .init(news: news)
     }
 }

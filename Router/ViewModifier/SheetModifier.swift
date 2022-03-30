@@ -25,7 +25,6 @@ struct SheetModifier<Item: Identifiable, Destination: View>: ViewModifier {
     // MARK: - View
 
     func body(content: Content) -> some View {
-        content.sheet(item: item, content: destination)
+        content.sheet(item: self.item, content: self.destination)
     }
-
 }

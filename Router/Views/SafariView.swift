@@ -18,7 +18,7 @@ struct SafariView: UIViewControllerRepresentable {
         let configuration = SFSafariViewController.Configuration()
         configuration.barCollapsingEnabled = false
         return SFSafariViewController(
-            url: url,
+            url: self.url,
             configuration: configuration
         )
     }

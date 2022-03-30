@@ -27,5 +27,4 @@ struct RootView: View {
                 .edgesIgnoringSafeArea(.all)
         }
     }
-
 }

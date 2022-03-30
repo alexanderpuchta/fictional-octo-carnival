@@ -26,9 +26,8 @@ struct PopoverModifier<Item: Identifiable, Destination: View>: ViewModifier {
 
     func body(content: Content) -> some View {
         content.popover(
-            item: item,
-            content: destination
+            item: self.item,
+            content: self.destination
         )
     }
-
 }
