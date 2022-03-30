@@ -16,7 +16,18 @@ extension NewsView {
         
         var body: some View {
             self.content
+                .navigationTitle(self.title)
         }
+    }
+}
+
+
+// MARK: - Properties
+
+private extension NewsView.DetailView {
+    
+    var title: String {
+        self.viewModel.news?.title ?? ""
     }
 }
 
@@ -26,8 +37,47 @@ extension NewsView {
 private extension NewsView.DetailView {
     
     var content: some View {
+        ScrollView {
+            self.viewModel.news.map { news in
+                LazyVStack(alignment: .leading, pinnedViews: [.sectionHeaders]) {
+                    Section(header: self.headerView) {
+                    
+                        VStack(alignment: .leading, spacing: 24) {
+                            Text(news.subtitle)
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                                .multilineTextAlignment(.leading)
+                                .fixedSize(
+                                    horizontal: false,
+                                    vertical: true
+                                )
+                            
+                            Divider()
+                            
+                            Text(news.body)
+                                .font(.body)
+                                .multilineTextAlignment(.leading)
+                                .fixedSize(
+                                    horizontal: false,
+                                    vertical: true
+                                )
+                        }
+                        .padding(24)
+                    }
+                }
+            }
+        }
+    }
+    
+    var headerView: some View {
         self.viewModel.news.map { news in
-            Text(news.subtitle)
+            AsyncImage(url: news.image) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            } placeholder: {
+                ProgressView()
+            }
         }
     }
 }
