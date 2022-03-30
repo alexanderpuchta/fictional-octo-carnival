@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct NewsModel {
+struct NewsModel: Codable {
     let body: String
     let id: String
     let image: URL?
@@ -27,6 +27,14 @@ struct NewsModel {
         self.image = URL(string: imageURL)
         self.subtitle = subtitle
         self.title = title
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case body = "content"
+        case id = "publishedAt"
+        case image = "urlToImage"
+        case subtitle = "description"
+        case title
     }
 }
 
