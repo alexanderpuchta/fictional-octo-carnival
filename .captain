@@ -1,0 +1,7 @@
+{
+    "pre-commit": [
+        "sh scripts/swiftformat.sh",
+        "rake tidy",
+        "git add -A"
+    ]
+}
