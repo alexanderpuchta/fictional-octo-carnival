@@ -6,7 +6,7 @@ import Combine
 import Foundation
 
 protocol NewsServiceRepresentable {
-    func fetch() async -> AnyPublisher<[NewsModel], RequestError>
+    func fetch(topic: String) async -> AnyPublisher<[NewsModel], RequestError>
 }
 
 
@@ -22,7 +22,13 @@ extension NewsService: HTTPClient {}
 
 extension NewsService: NewsServiceRepresentable {
     
-    func fetch() async -> AnyPublisher<[NewsModel], RequestError> {
-        await self.request(router: NewsRouter.fetch, result: [NewsModel].self)
+    func fetch(topic: String) async -> AnyPublisher<[NewsModel], RequestError> {
+        await self.request(
+            router: NewsRouter.fetch(
+                topic: topic,
+                language: "de"
+            ),
+            result: [NewsModel].self
+        )
     }
 }

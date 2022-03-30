@@ -12,6 +12,9 @@ extension NewsView {
         @Published
         private(set) var news = [NewsModel]()
         
+        @Published
+        var topic: String = ""
+        
         private var cancellables = Set<AnyCancellable>()
         private unowned let coordinator: NewsRootView.Coordinator
         private let manager: NewsManagerRepresentable
@@ -27,7 +30,7 @@ extension NewsView {
             self.coordinator = coordinator
             self.manager = manager
             
-            self.fetchNews()
+            self.setupPublisher()
         }
     }
 }
@@ -43,13 +46,31 @@ extension NewsView.ViewModel {
 }
 
 
+// MARK: - Publisher
+
+private extension NewsView.ViewModel {
+    
+    func setupPublisher() {
+        self.$topic
+            .debounce(
+                for: 0.25,
+                scheduler: RunLoop.main
+            )
+            .sink { [weak self] topic in
+                self?.fetchNews(with: topic)
+            }
+            .store(in: &self.cancellables)
+    }
+}
+
+
 // MARK: - Helper
 
 private extension NewsView.ViewModel {
     
-    func fetchNews() {
+    func fetchNews(with topic: String) {
         Task {
-            await self.manager.fetch()
+            await self.manager.fetch(topic: topic)
                 .receive(on: DispatchQueue.main)
                 .sink { completion in
                     switch completion {

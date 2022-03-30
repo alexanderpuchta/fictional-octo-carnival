@@ -14,6 +14,12 @@ struct NewsView: View {
     
     var body: some View {
         self.content
+            .toolbar {
+                ToolbarItem(placement: .navigation) {
+                    Text("NewsFeed")
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -28,5 +34,6 @@ private extension NewsView {
                 .fontWeight(.bold)
                 .onNavigation { self.viewModel.details(news) }
         }
+        .searchable(text: self.$viewModel.topic)
     }
 }

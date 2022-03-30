@@ -5,7 +5,7 @@
 import Foundation
 
 enum NewsRouter {
-    case fetch
+    case fetch(topic: String, language: String)
 }
 
 
@@ -18,10 +18,13 @@ extension NewsRouter: Router {
     }
     
     var parameters: [String: Any] {
-        [
-            "language": "de",
-            "q": "bitcoin"
-        ]
+        switch self {
+        case let .fetch(topic, language):
+            return [
+                "language": language,
+                "q": topic
+            ]
+        }
     }
     
     var path: String {
