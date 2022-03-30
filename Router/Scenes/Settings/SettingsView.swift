@@ -26,7 +26,7 @@ private extension SettingsView {
         List(self.viewModel.settings, id: \.self) { item in
             Text(item)
                 .fontWeight(.bold)
-                .onNavigation { self.viewModel.open(item: item) } 
+                .onNavigation { self.viewModel.open(item: item) }
         }
     }
 }

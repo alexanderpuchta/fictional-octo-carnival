@@ -9,7 +9,7 @@ extension NewsView {
     final class ViewModel: ObservableObject {
         
         @Published
-        private(set) var news = [String]()
+        private(set) var news = [NewsModel]()
         
         private unowned let coordinator: NewsRootView.Coordinator
         
@@ -19,7 +19,7 @@ extension NewsView {
         init(coordinator: NewsRootView.Coordinator) {
             
             self.coordinator = coordinator
-            self.news.append("Test!!!")
+            self.news.append(contentsOf: NewsModel.all)
         }
     }
 }
@@ -29,7 +29,7 @@ extension NewsView {
 
 extension NewsView.ViewModel {
     
-    func details(_ news: String) {
+    func details(_ news: NewsModel) {
         self.coordinator.open(news: news)
     }
 }

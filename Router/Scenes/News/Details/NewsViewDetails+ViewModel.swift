@@ -9,13 +9,13 @@ extension NewsView.DetailView {
     final class ViewModel: ObservableObject {
         
         @Published
-        var id: String = ""
+        var news: NewsModel?
         
         
         // MARK: - Init
         
-        init(id: String) {
-            self.id = id
+        init(news: NewsModel) {
+            self.news = news
         }
     }
 }

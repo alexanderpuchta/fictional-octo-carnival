@@ -38,7 +38,7 @@ extension View {
                 }
             }
         )
-        return navigation(isActive: isActive) {
+        return self.navigation(isActive: isActive) {
             item.wrappedValue.map(destination)
         }
     }
@@ -57,7 +57,6 @@ extension View {
             )
         )
     }
-
 }
 
 extension NavigationLink {
@@ -83,5 +82,4 @@ extension NavigationLink {
             label: label
         )
     }
-
 }

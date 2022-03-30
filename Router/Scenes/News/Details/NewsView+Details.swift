@@ -26,6 +26,8 @@ extension NewsView {
 private extension NewsView.DetailView {
     
     var content: some View {
-        Text(self.viewModel.id)
+        self.viewModel.news.map { news in
+            Text(news.subtitle)
+        }
     }
 }
