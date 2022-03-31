@@ -1,5 +1,5 @@
 //
-//  Copyright © 2022 alexanderpuchta -  All rights reserved.
+//  Copyright © 2022 alexanderpuchta - All rights reserved.
 //
 
 import SwiftUI
@@ -37,7 +37,7 @@ private extension SettingsView.ItemView {
 }
 
 
-// MARK: Helper
+// MARK: - Helper
 
 private extension SettingsView.ItemView {
     
