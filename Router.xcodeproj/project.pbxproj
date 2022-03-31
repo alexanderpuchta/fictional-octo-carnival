@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F753315727EF2C2C007959F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F753315627EF2C2C007959F3 /* Assets.xcassets */; };
 		F75DD81F27F59504004F1C36 /* Bundle+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DD81E27F59504004F1C36 /* Bundle+Items.swift */; };
-		F75DD82227F5983E004F1C36 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DD82127F5983E004F1C36 /* Constants.swift */; };
+		F7DD419E27F59DEE008963FB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DD419D27F59DEE008963FB /* Constants.swift */; };
 		F76614BF27F4BB5400426813 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76614BE27F4BB5400426813 /* HTTPClient.swift */; };
 		F76614C427F4C74000426813 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76614C327F4C74000426813 /* NewsManager.swift */; };
 		F771D70127F47D5A00097952 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771D70027F47D5A00097952 /* NewsModel.swift */; };
@@ -21,6 +21,7 @@
 		F753318F27EF3047007959F3 /* NewsView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753318E27EF3047007959F3 /* NewsView+ViewModel.swift */; };
 		F753318B27EF3012007959F3 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753318A27EF3012007959F3 /* NewsView.swift */; };
 		F753319627EF3407007959F3 /* NewsViewDetails+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753319527EF3407007959F3 /* NewsViewDetails+ViewModel.swift */; };
+		F75DD82427F59B69004F1C36 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DD82327F59B69004F1C36 /* Optional+Extensions.swift */; };
 		F753318127EF2EA7007959F3 /* PopOverModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753318027EF2EA7007959F3 /* PopOverModifier.swift */; };
 		F753315A27EF2C2C007959F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F753315927EF2C2C007959F3 /* Preview Assets.xcassets */; };
 		F753318627EF2F38007959F3 /* RootView+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753318527EF2F38007959F3 /* RootView+Coordinator.swift */; };
@@ -62,7 +63,7 @@
 /* Begin PBXFileReference section */
 		F753315627EF2C2C007959F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F75DD81E27F59504004F1C36 /* Bundle+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Items.swift"; sourceTree = "<group>"; };
-		F75DD82127F5983E004F1C36 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F7DD419D27F59DEE008963FB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F76614BE27F4BB5400426813 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		F75DD82027F59543004F1C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F76614C327F4C74000426813 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		F753318E27EF3047007959F3 /* NewsView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsView+ViewModel.swift"; sourceTree = "<group>"; };
 		F753318A27EF3012007959F3 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		F753319527EF3407007959F3 /* NewsViewDetails+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsViewDetails+ViewModel.swift"; sourceTree = "<group>"; };
+		F75DD82327F59B69004F1C36 /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
 		F753318027EF2EA7007959F3 /* PopOverModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverModifier.swift; sourceTree = "<group>"; };
 		F753315927EF2C2C007959F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F753318527EF2F38007959F3 /* RootView+Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootView+Coordinator.swift"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				F75DD81E27F59504004F1C36 /* Bundle+Items.swift */,
+				F75DD82327F59B69004F1C36 /* Optional+Extensions.swift */,
 				F753319D27EF3BF7007959F3 /* URL+Identifiable.swift */,
 				F753317C27EF2D94007959F3 /* View+Navigation.swift */,
 			);
@@ -277,7 +280,7 @@
 		F75331A027EF3DF5007959F3 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				F75DD82127F5983E004F1C36 /* Constants.swift */,
+				F7DD419D27F59DEE008963FB /* Constants.swift */,
 				F753315227EF2C2B007959F3 /* RouterApp.swift */,
 			);
 			path = App;
@@ -416,10 +419,9 @@
 			};
 			buildConfigurationList = F753314A27EF2C2B007959F3 /* Build configuration list for PBXProject "Router" */;
 			compatibilityVersion = "Xcode 13.0";
-			developmentRegion = en;
+			developmentRegion = de;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				de,
 			);
 			mainGroup = F753314627EF2C2B007959F3;
@@ -466,7 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F75DD81F27F59504004F1C36 /* Bundle+Items.swift in Sources */,
-				F75DD82227F5983E004F1C36 /* Constants.swift in Sources */,
+				F7DD419E27F59DEE008963FB /* Constants.swift in Sources */,
 				F76614BF27F4BB5400426813 /* HTTPClient.swift in Sources */,
 				F76614C427F4C74000426813 /* NewsManager.swift in Sources */,
 				F771D70127F47D5A00097952 /* NewsModel.swift in Sources */,
@@ -478,6 +480,7 @@
 				F753318F27EF3047007959F3 /* NewsView+ViewModel.swift in Sources */,
 				F753318B27EF3012007959F3 /* NewsView.swift in Sources */,
 				F753319627EF3407007959F3 /* NewsViewDetails+ViewModel.swift in Sources */,
+				F75DD82427F59B69004F1C36 /* Optional+Extensions.swift in Sources */,
 				F753318127EF2EA7007959F3 /* PopOverModifier.swift in Sources */,
 				F753318627EF2F38007959F3 /* RootView+Coordinator.swift in Sources */,
 				F753318827EF2FB5007959F3 /* RootView.swift in Sources */,

@@ -26,7 +26,7 @@ extension NewsService: NewsServiceRepresentable {
         await self.request(
             router: NewsRouter.fetch(
                 topic: topic,
-                language: "de"
+                language: Locale.current.languageCode.orGermany
             ),
             result: [NewsModel].self
         )
