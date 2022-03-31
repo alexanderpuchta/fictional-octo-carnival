@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F753315727EF2C2C007959F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F753315627EF2C2C007959F3 /* Assets.xcassets */; };
 		F75DD81F27F59504004F1C36 /* Bundle+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DD81E27F59504004F1C36 /* Bundle+Items.swift */; };
+		F75DD82227F5983E004F1C36 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DD82127F5983E004F1C36 /* Constants.swift */; };
 		F76614BF27F4BB5400426813 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76614BE27F4BB5400426813 /* HTTPClient.swift */; };
 		F76614C427F4C74000426813 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76614C327F4C74000426813 /* NewsManager.swift */; };
 		F771D70127F47D5A00097952 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771D70027F47D5A00097952 /* NewsModel.swift */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		F753315627EF2C2C007959F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F75DD81E27F59504004F1C36 /* Bundle+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Items.swift"; sourceTree = "<group>"; };
+		F75DD82127F5983E004F1C36 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F76614BE27F4BB5400426813 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		F75DD82027F59543004F1C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F76614C327F4C74000426813 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 		F75331A027EF3DF5007959F3 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F75DD82127F5983E004F1C36 /* Constants.swift */,
 				F753315227EF2C2B007959F3 /* RouterApp.swift */,
 			);
 			path = App;
@@ -463,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F75DD81F27F59504004F1C36 /* Bundle+Items.swift in Sources */,
+				F75DD82227F5983E004F1C36 /* Constants.swift in Sources */,
 				F76614BF27F4BB5400426813 /* HTTPClient.swift in Sources */,
 				F76614C427F4C74000426813 /* NewsManager.swift in Sources */,
 				F771D70127F47D5A00097952 /* NewsModel.swift in Sources */,

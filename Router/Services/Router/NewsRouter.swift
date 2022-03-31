@@ -14,20 +14,41 @@ enum NewsRouter {
 extension NewsRouter: Router {
     
     var keyPath: String? {
-        "articles"
+        Constants.API.KeyPath.articles
     }
     
     var parameters: [String: Any] {
         switch self {
         case let .fetch(topic, language):
             return [
-                "language": language,
-                "q": topic
+                Constants.API.ParameterKey.language: language,
+                Constants.API.ParameterKey.search: topic
             ]
         }
     }
     
     var path: String {
-        "everything"
+        Constants.API.Path.all
+    }
+}
+
+
+// MARK: - Keys
+
+private extension Constants.API {
+    
+    enum ParameterKey {
+        static let language = "language"
+        static let search = "q"
+    }
+}
+
+
+// MARK: - KeyPath
+
+private extension Constants.API {
+    
+    enum KeyPath {
+        static let articles = "articles"
     }
 }
