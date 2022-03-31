@@ -18,7 +18,7 @@ protocol Router {
 extension Router {
     
     var baseURL: String {
-        "https://newsapi.org/v2/"
+        Constants.API.baseURL
     }
     
     var header: [String: String] {
@@ -28,7 +28,7 @@ extension Router {
         }
         
         return [
-            "Authorization": "Bearer \(apiKey)"
+            Constants.API.Header.auth: "\(Constants.API.Header.bearer) \(apiKey)"
         ]
     }
     
@@ -61,4 +61,15 @@ enum RequestError: Error {
     case noResponse
     case unauthorized
     case unknown
+}
+
+
+// MARK: - API+Header
+
+private extension Constants.API {
+    
+    enum Header {
+        static let auth = "Authorization"
+        static let bearer = "Bearer"
+    }
 }
