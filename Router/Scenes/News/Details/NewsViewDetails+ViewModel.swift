@@ -11,11 +11,28 @@ extension NewsView.DetailView {
         @Published
         var news: NewsModel?
         
+        private unowned let coordinator: NewsRootView.Coordinator
+        
         
         // MARK: - Init
         
-        init(news: NewsModel) {
+        init(
+            news: NewsModel,
+            coordinator: NewsRootView.Coordinator
+        ) {
+            
+            self.coordinator = coordinator
             self.news = news
         }
+    }
+}
+
+
+// MARK: - Interactions
+
+extension NewsView.DetailView.ViewModel {
+    
+    func openURL() {
+        self.coordinator.open(url: self.news?.url)
     }
 }
