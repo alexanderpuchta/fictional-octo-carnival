@@ -22,8 +22,13 @@ extension Router {
     }
     
     var header: [String: String] {
-        [
-            "Authorization": "Bearer 1b9b71083e6542cabcb6715db5aff362"
+        
+        guard let apiKey = Bundle.main.apiKey else {
+            return [:]
+        }
+        
+        return [
+            "Authorization": "Bearer \(apiKey)"
         ]
     }
     
