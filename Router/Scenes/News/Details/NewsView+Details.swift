@@ -58,7 +58,7 @@ private extension NewsView.DetailView {
                             
                             Divider()
                             
-                            Text(news.body)
+                            Text(news.cleaned)
                                 .font(.body)
                                 .multilineTextAlignment(.leading)
                                 .fixedSize(
@@ -82,6 +82,7 @@ private extension NewsView.DetailView {
             } placeholder: {
                 ProgressView()
             }
+            .onTapGesture(perform: self.viewModel.openURL)
         }
     }
 }

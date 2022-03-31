@@ -36,6 +36,18 @@ extension NewsRootView.Coordinator {
     }
     
     func open(news: NewsModel) {
-        self.detailViewModel = .init(news: news)
+        self.detailViewModel = .init(
+            news: news,
+            coordinator: self
+        )
+    }
+    
+    func open(url: URL?) {
+        
+        guard let url = url else {
+            return
+        }
+
+        self.parent.open(url)
     }
 }
