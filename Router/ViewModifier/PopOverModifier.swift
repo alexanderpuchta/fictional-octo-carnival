@@ -1,5 +1,5 @@
 //
-//  Copyright © 2022 alexanderpuchta -  All rights reserved.
+//  Copyright © 2022 alexanderpuchta - All rights reserved.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ struct PopoverModifier<Item: Identifiable, Destination: View>: ViewModifier {
     private let item: Binding<Item?>
 
     
-    // MARK: Init
+    // MARK: - Init
 
     init(
         item: Binding<Item?>,
@@ -22,7 +22,7 @@ struct PopoverModifier<Item: Identifiable, Destination: View>: ViewModifier {
     }
 
     
-    // MARK: View
+    // MARK: - View
 
     func body(content: Content) -> some View {
         content.popover(

@@ -1,5 +1,5 @@
 //
-//  Copyright © 2022 alexanderpuchta -  All rights reserved.
+//  Copyright © 2022 alexanderpuchta - All rights reserved.
 //
 
 import SafariServices
@@ -11,7 +11,7 @@ struct SafariView: UIViewControllerRepresentable {
     let url: URL
 
     
-    // MARK: View
+    // MARK: - View
 
     func makeUIViewController(context: Context) -> SFSafariViewController {
         

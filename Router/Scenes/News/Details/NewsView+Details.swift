@@ -1,5 +1,5 @@
 //
-//  Copyright © 2022 alexanderpuchta -  All rights reserved.
+//  Copyright © 2022 alexanderpuchta - All rights reserved.
 //
 
 import SwiftUI
